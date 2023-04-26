@@ -53,7 +53,7 @@ def sample_color
 end
 
 require 'csv'
-CSV.foreach("#{result_folder}.csv") do |line|
+CSV.foreach("#{result_folder}.csv", headers: true ) do |line|
   pic line[0], line[1], result_folder
 end
 
